@@ -7,6 +7,8 @@ const yoga = createYoga({
       type Query {
         hello: String!
         name: String!
+        location: String!
+        bio: String!
       }
     `,
     resolvers: {
@@ -14,6 +16,12 @@ const yoga = createYoga({
         hello: () => "Hello from Yoga!",
         name() {
           return "My name is jnanesh";
+        },
+        location() {
+          return "Vizianagaram";
+        },
+        bio() {
+          return "B.tech";
         },
       },
     },
